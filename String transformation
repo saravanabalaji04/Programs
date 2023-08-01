@@ -1,0 +1,44 @@
+input:
+aaabbccdd
+OUTPUT:
+3a2b2c2d
+INPUT:
+abbcccaaadd
+OUTPUT:
+1a2b3c3a2d
+
+import java.util.*;
+public class MyClass {
+    public static void main(String args[]) {
+      Scanner s=new Scanner(System.in);
+      String str=s.next();
+      String ss="";
+      for(int i=0;i<str.length();i++)
+      {
+          if(i<str.length()-1)
+          {
+            if(str.charAt(i)!=str.charAt(i+1))
+            {
+                ss+=str.charAt(i)+"#";
+            }
+            else
+            {
+              ss+=str.charAt(i);
+            }
+          }
+          else
+          {
+              ss+=str.charAt(str.length()-1);
+          }
+      }
+      String sd[]=ss.split("#");
+      int v=0;
+      for(int i=0;i<sd.length;i++)
+      {
+          int l=sd[i].length();
+          System.out.print(str.charAt(v));
+          System.out.print(l);
+          v+=l;
+      }
+    }
+}
