@@ -1,11 +1,11 @@
 input:
 aaabbccdd
 OUTPUT:
-3a2b2c2d
+a3b2c2d2
 INPUT:
 abbcccaaadd
 OUTPUT:
-1a2b3c3a2d
+a1b2c3a3d2
 
 import java.util.*;
 public class MyClass {
