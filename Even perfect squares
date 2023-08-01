@@ -1,0 +1,42 @@
+import java.util.*;
+public class MyClass {
+    public static void main(String args[]) {
+      Scanner s=new Scanner(System.in);
+      int n=s.nextInt();
+      int a=1,flag=0,sflag=0;
+      while((a*a)<=n)
+      {
+          int b=a*a;
+          if(b==n)
+          {
+              flag=1;
+          }
+          a++;
+      }
+      if(flag==0)
+      {
+          System.out.print("-1");
+      }
+      else
+      {
+        while(n>0)
+        {
+            int r=n%10;
+            if(r%2!=0)
+            {
+                sflag=1;
+                break;
+            }
+            n/=10;
+        }
+        if(sflag==1)
+        {
+            System.out.print(-1);
+        }
+        else
+        {
+            System.out.print(1);
+        }
+      }
+    }
+}
